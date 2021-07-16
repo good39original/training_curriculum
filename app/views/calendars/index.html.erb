@@ -1,31 +1,16 @@
-<<<<<<< HEAD
-<div>
-  <%= form_with model: @path, url: calendars_path, class: 'form' do |f| %>
-=======
-<%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
->>>>>>> 434b1f49a3fa36ace6a77ec6d37bc6b7b1a8b666
+ <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'lavel' %>
     <%= f.date_field :date, class: 'date-select' %>
     <%= f.label :予定を入力, class: 'lavel' %>
     <%= f.text_field :plan, class: 'text-input' %>
     <%= f.submit '保存' %>
   <% end %>
-<<<<<<< HEAD
-</div>
+
   <div class='calendar'>
     <%= @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <%= day[:month] %>/<%= day[:date] %>/<%= day[:date_time]%>
-=======
-
-
-  <div class='calendar'>
-    <%= @week_days.each do |day| %>
-      <div class='item'>
-        <div class='Date'>
-          <% day[:month] %><% day[:date] %>
->>>>>>> 434b1f49a3fa36ace6a77ec6d37bc6b7b1a8b666
+          <%= day[:month] %>/<%= day[:date] %>/<%= day[(:date_time)] %>
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
